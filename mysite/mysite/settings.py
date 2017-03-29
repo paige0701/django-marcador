@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Like this apps must be declared. marcador is a app inside a mysite project. Multiple apps may exist
     'marcador',
+    'crispy_forms',
+
 
 ]
 
@@ -122,6 +124,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# stating the where static file is located
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# when someone who is not authorised tries to get excess they are redirected to login url
+LOGIN_URL = 'mysite_login'
+LOGOUT_URL = 'mysite_logout'
+LOGIN_REDIRECT_URL = 'bookmark_list'
+
+
+#crispy form comes with bootstrap3 but it is not default configured. Must be configured.
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
