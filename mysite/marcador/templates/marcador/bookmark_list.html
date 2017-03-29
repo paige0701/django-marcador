@@ -1,0 +1,16 @@
+{% extends 'marcador/base.html' %}
+{% block title %}Bookmark{% endblock %}
+
+{% block heading %}
+    <h3>The bookmark lists</h3>
+{% endblock %}
+
+{% block content %}
+    <ul class="list-unstyled">
+        {% for bookmark in bookmarks %}
+            <li class="well well-sm">{% include "marcador/bookmark.html" %}</li>
+        {% empty %}
+            <li>No bookmarks. :(</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
