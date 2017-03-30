@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Like this apps must be declared. marcador is a app inside a mysite project. Multiple apps may exist
+    # Like this apps must be declared. marcador is an app inside a mysite project. Multiple apps may exist
     'marcador',
     'crispy_forms',
 
